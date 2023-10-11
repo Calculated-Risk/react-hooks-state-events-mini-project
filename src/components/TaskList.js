@@ -1,9 +1,21 @@
 import React from "react";
+import Task from "./Task";
 
-function TaskList() {
+function TaskList({taskData}) {
+  console.log({taskData})
+
+  const taskCardBuilder = taskData.map((task) => {
+    return (
+        <Task 
+        key={task.text} 
+        taskProp={task}
+        />
+    );
+  })
+
   return (
     <div className="tasks">
-      {/* display a list of tasks using Task component */}
+      {taskCardBuilder}
     </div>
   );
 }
