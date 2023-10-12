@@ -1,7 +1,7 @@
 import React from "react";
 import Task from "./Task";
 
-function TaskList({taskData}) {
+function TaskList({taskData, onClickXTask}) {
   console.log({taskData})
 
   const taskCardBuilder = taskData.map((task) => {
@@ -9,6 +9,7 @@ function TaskList({taskData}) {
         <Task 
         key={task.text} 
         taskProp={task}
+        onClickXTask={onClickXTask}
         />
     );
   })
