@@ -1,7 +1,7 @@
 import React from "react";
 
-function Task({taskProp, onClickXTask}) {   
- const{text, category} = taskProp
+function Task({text, category, onClickXTask}) {   
+ 
 
 function handleClick(){
  onClickXTask(text)

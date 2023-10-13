@@ -9,9 +9,9 @@
 
 import React from "react";
 
-function CategoryFilter({categoryData, selectedCategory, setSelectedCategory}) {
+function CategoryFilter({categories, selectedCategory, setSelectedCategory}) {
   
-    const categoryAddedToButton = categoryData.map(category => {
+    const categoryAddedToButton = categories.map(category => {
       const addClassName = category === selectedCategory ? 'selected' : null;
 
       return(
